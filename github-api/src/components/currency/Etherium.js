@@ -10,21 +10,21 @@ class Etherium extends Component {
 			}
 	}
 
-	componentDidMount() {
-		axios.get('https://api.github.com/repos/ethereum/go-ethereum', {
-			headers: {
-				Accept: 'application/vnd.github.v3+json'
-			}
-		})
-		.then(res => {
-			this.setState({
-				cards: res.data,
-			})
-		})
-		.catch(e => {
-      console.log('error', e);        
-    })
-	}
+	// componentWillMount() {
+	// 	axios.get('https://api.github.com/repos/ethereum/go-ethereum', {
+	// 		headers: {
+	// 			Accept: 'application/vnd.github.v3+json'
+	// 		}
+	// 	})
+	// 	.then(res => {
+	// 		this.setState({
+	// 			cards: res.data,
+	// 		})
+	// 	})
+	// 	.catch(e => {
+ //      console.log('error', e);        
+ //    })
+	// }
 
 	render() {
 		return (
