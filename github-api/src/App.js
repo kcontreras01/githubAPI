@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import ShowCards from './components/ShowCards';
+import Etherium from './components/Etherium';
+import Bitcoin from './components/Bitcoin';
+import Ripple from './components/Ripple';
+import EOS from './components/EOS';
+import CCXT from './components/ccxt';
+import Zenbot from './components/Zenbot';
+import SingleCard from './components/SingleCard';
 import './App.css';
 
 class App extends Component {
@@ -15,7 +21,13 @@ class App extends Component {
           Hello
         </p>
 
-        <ShowCards />
+        <Etherium />
+        <Bitcoin />
+        <Ripple />
+        <EOS />
+        <CCXT />
+        <Zenbot />
+
       </div>
     );
   }

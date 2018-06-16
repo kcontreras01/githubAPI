@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import SingleCard from './SingleCard';
 
-class ShowCards extends Component {
+class Etherium extends Component {
 	constructor(props) {
 		super(props);
+			this.state = {
+				cards: []
+			}
+
 		this.showAllCards = this.showAllCards.bind(this);
-		
-		this.state = {
-			cards: []
-		}
+
 	}
 
+
+ // "https://api.github.com/search/repositories?q=cryptocurrency&sort=stars&order=desc"
 	componentDidMount() {
 		axios.get('https://api.github.com/repos/ethereum/go-ethereum', {
 			headers: {
@@ -18,11 +22,9 @@ class ShowCards extends Component {
 			}
 		})
 		.then(res => {
-			// console.log('the state is: ', this.state.cards);
 			this.setState({
 				cards: res.data,
 			})
-			// console.log('the res is: ', res.data)
 		})
 		.catch(e => {
       console.log('error', e);        
@@ -30,19 +32,22 @@ class ShowCards extends Component {
 	}
 
 	showAllCards() {
-		console.log(this.state.cards);
-		const cardInfo = this.state;
-		console.log(cardInfo);
+		const cardInfo = this.state.cards;
 		return (
 				<div>
-					<li>
-						{cardInfo.cards.name}
-					</li>
+						<p>{cardInfo.name}</p>
+						<p>{cardInfo.description}</p>
+						<p>{cardInfo.language}</p>
+						<p>{cardInfo.open_issues}</p>
+						<p>{cardInfo.forks}</p>
+						<a href={cardInfo.homepage} target="_blank">Homepage</a>
 				</div>
 			)
 	}
 
 	render() {
+			console.log(this.state.cards);
+
 		return (
 				<div className="allCards">
 					{this.showAllCards()}
@@ -51,4 +56,4 @@ class ShowCards extends Component {
 	}
 }
 
-export default ShowCards;
+export default Etherium;
