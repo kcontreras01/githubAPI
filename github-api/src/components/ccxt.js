@@ -8,13 +8,8 @@ class CCXT extends Component {
 			this.state = {
 				cards: []
 			}
-
-		this.showAllCards = this.showAllCards.bind(this);
-
 	}
 
-
- // "https://api.github.com/search/repositories?q=cryptocurrency&sort=stars&order=desc"
 	componentDidMount() {
 		axios.get('https://api.github.com/repos/ccxt/ccxt', {
 			headers: {
@@ -31,26 +26,10 @@ class CCXT extends Component {
     })
 	}
 
-	showAllCards() {
-		const cardInfo = this.state.cards;
-		return (
-				<div>
-						<p>{cardInfo.name}</p>
-						<p>{cardInfo.description}</p>
-						<p>{cardInfo.language}</p>
-						<p>{cardInfo.open_issues}</p>
-						<p>{cardInfo.forks}</p>
-						<a href={cardInfo.homepage} target="_blank">Homepage</a>
-				</div>
-			)
-	}
-
 	render() {
-			console.log(this.state.cards);
-
 		return (
 				<div className="allCards">
-					{this.showAllCards()}
+					<SingleCard dataResults={this.state.cards}/>
 				</div>
 			)
 	}
