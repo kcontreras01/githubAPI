@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Etherium from './components/Etherium';
-import Bitcoin from './components/Bitcoin';
-import Ripple from './components/Ripple';
-import EOS from './components/EOS';
-import CCXT from './components/ccxt';
-import Zenbot from './components/Zenbot';
-import SingleCard from './components/SingleCard';
+import Top6Today from './components/Top6Today';
 import './App.css';
 
 class App extends Component {
@@ -17,16 +11,10 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          Hello
-        </p>
 
-        <Etherium />
-        <Bitcoin />
-        <Ripple />
-        <EOS />
-        <CCXT />
-        <Zenbot />
+        <div>
+          <Top6Today />    
+        </div>
 
       </div>
     );

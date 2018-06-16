@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import SingleCard from './SingleCard';
+import SingleCard from '../SingleCard';
 
-class Etherium extends Component {
+class CCXT extends Component {
 	constructor(props) {
 		super(props);
 			this.state = {
@@ -11,7 +11,7 @@ class Etherium extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('https://api.github.com/repos/ethereum/go-ethereum', {
+		axios.get('https://api.github.com/repos/ccxt/ccxt', {
 			headers: {
 				Accept: 'application/vnd.github.v3+json'
 			}
@@ -28,11 +28,11 @@ class Etherium extends Component {
 
 	render() {
 		return (
-				<div className="allCards">
+				<div className="col">
 					<SingleCard dataResults={this.state.cards}/>
 				</div>
 			)
 	}
 }
 
-export default Etherium;
+export default CCXT;
