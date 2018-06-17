@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 
 class SingleCard extends Component {
 	constructor(props) {
@@ -9,7 +8,9 @@ class SingleCard extends Component {
 		}
 
 		showCard() {
-			const cards = this.props.dataResults;
+			const cards = this.props.dataResults.cards;
+			const avatar = this.props.dataResults.avatar;
+			console.log(cards);
 			return (
 				<div>
 					<div className="card-header">
@@ -20,6 +21,7 @@ class SingleCard extends Component {
 						<p className="text-sm-left">{cards.language}</p>
 						<p className="text-sm-left">Open Issues: {cards.open_issues}</p>
 						<p className="text-sm-left">Forks: {cards.forks}</p>
+						<img src={avatar} alt="avatar_url"/>
 						<a href={cards.homepage} target="_blank" className="btn btn-primary">Homepage</a>
 					</div>
 				</div>				
@@ -29,8 +31,8 @@ class SingleCard extends Component {
 	render() {
 		return (
 			<div  className="card bg-light mb-3 border-light h-100">
-			{this.showCard()}
-		</div>
+				{this.showCard()}
+			</div>
 		)
 	}
 

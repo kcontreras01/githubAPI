@@ -6,7 +6,8 @@ class Bitcoin extends Component {
 	constructor(props) {
 		super(props);
 			this.state = {
-				cards: []
+				cards: [],
+				avatar: []
 			}
 	}
 
@@ -19,6 +20,7 @@ class Bitcoin extends Component {
 		.then(res => {
 			this.setState({
 				cards: res.data,
+				avatar: res.data.owner.avatar_url
 			})
 		})
 		.catch(e => {
@@ -29,7 +31,7 @@ class Bitcoin extends Component {
 	render() {
 		return (
 				<div className="col">
-					<SingleCard dataResults={this.state.cards}/>
+					<SingleCard dataResults={this.state}/>
 				</div>
 			)
 	}

@@ -6,7 +6,8 @@ class Ripple extends Component {
 	constructor(props) {
 		super(props);
 			this.state = {
-				cards: []
+				cards: [],
+				avatar: []
 			}
 	}
 
@@ -17,9 +18,11 @@ class Ripple extends Component {
 			}
 		})
 		.then(res => {
+			console.log(res)
 			this.setState({
 				cards: res.data,
-			})
+				avatar: res.data.owner.avatar_url
+			}), console.log(this.state)
 		})
 		.catch(e => {
       console.log('error', e);        
@@ -29,7 +32,7 @@ class Ripple extends Component {
 	render() {
 		return (
 				<div className="col">
-					<SingleCard dataResults={this.state.cards}/>
+					<SingleCard dataResults={this.state}/>
 				</div>
 			)
 	}
