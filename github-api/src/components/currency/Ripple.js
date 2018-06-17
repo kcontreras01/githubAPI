@@ -18,11 +18,10 @@ class Ripple extends Component {
 			}
 		})
 		.then(res => {
-			console.log(res)
 			this.setState({
 				cards: res.data,
 				avatar: res.data.owner.avatar_url
-			}), console.log(this.state)
+			})
 		})
 		.catch(e => {
       console.log('error', e);        
