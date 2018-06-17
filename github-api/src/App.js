@@ -12,7 +12,6 @@ class App extends Component {
     render() {
       return (
       <div className="container">
-      <Intro />
         <div className="row">
           <Etherium />
           <Bitcoin />
