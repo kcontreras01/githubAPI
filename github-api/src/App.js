@@ -3,8 +3,8 @@ import Etherium from './components/currency/Etherium';
 import Bitcoin from './components/currency/Bitcoin';
 import Ripple from './components/currency/Ripple';
 import EOS from './components/currency/EOS';
-import CCXT from './components/currency/ccxt';
-import Zenbot from './components/currency/Zenbot';
+import BitcoinCash from './components/currency/BitcoinCash';
+import Litecoin from './components/currency/Litecoin';
 import Intro from './components/Intro';
 import './App.css';
 
@@ -19,8 +19,8 @@ class App extends Component {
         </div>
         <div className="row">
           <EOS />
-          <CCXT />
-          <Zenbot />
+          <BitcoinCash />
+          <Litecoin />
         </div>
       </div>
     );

@@ -20,10 +20,8 @@ class SingleCard extends Component {
 						<p className="text-sm-left">{cards.language}</p>
 						<p className="text-sm-left">Open Issues: {cards.open_issues}</p>
 						<p className="text-sm-left">Forks: {cards.forks}</p>
-
-							<img src={avatar} alt="avatar_url" className="h-25 w-25 p-2"/>
-							<a href={cards.homepage} target="_blank" className="btn btn-primary p-2 w-50">Homepage</a>
-
+						<img src={avatar} alt="avatar_url" className="h-25 w-25 p-2"/>
+						<a href={cards.homepage} target="_blank" className="btn btn-primary p-2 w-50">Homepage</a>
 					</div>
 				</div>				
 				)
