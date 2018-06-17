@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import SingleCard from '../SingleCard';
+import SingleCard from './SingleCard';
 
 class Zenbot extends Component {
 	constructor(props) {
@@ -28,7 +28,7 @@ class Zenbot extends Component {
 
 	render() {
 		return (
-				<div className="col">
+				<div className="allCards">
 					<SingleCard dataResults={this.state.cards}/>
 				</div>
 			)

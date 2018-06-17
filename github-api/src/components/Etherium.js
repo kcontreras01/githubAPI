@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import SingleCard from '../SingleCard';
+import SingleCard from './SingleCard';
 
-class Bitcoin extends Component {
+class Etherium extends Component {
 	constructor(props) {
 		super(props);
 			this.state = {
@@ -10,8 +10,8 @@ class Bitcoin extends Component {
 			}
 	}
 
-	componentDidMount() {
-		axios.get('https://api.github.com/repos/bitcoin/bitcoin', {
+	componentWillMount() {
+		axios.get('https://api.github.com/repos/ethereum/go-ethereum', {
 			headers: {
 				Accept: 'application/vnd.github.v3+json'
 			}
@@ -28,11 +28,11 @@ class Bitcoin extends Component {
 
 	render() {
 		return (
-				<div className="col">
+				<div className="allCards">
 					<SingleCard dataResults={this.state.cards}/>
 				</div>
 			)
 	}
 }
 
-export default Bitcoin;
+export default Etherium;
