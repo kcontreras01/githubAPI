@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import SingleCard from '../SingleCard';
 
-class CCXT extends Component {
+class Litecoin extends Component {
 	constructor(props) {
 		super(props);
 			this.state = {
@@ -12,7 +12,7 @@ class CCXT extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('https://api.github.com/repos/ccxt/ccxt', {
+		axios.get('https://api.github.com/repos/litecoin-project/litecoin', {
 			headers: {
 				Accept: 'application/vnd.github.v3+json'
 			}
@@ -37,4 +37,4 @@ class CCXT extends Component {
 	}
 }
 
-export default CCXT;
+export default Litecoin;

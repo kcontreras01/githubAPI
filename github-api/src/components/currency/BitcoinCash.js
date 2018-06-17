@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import SingleCard from '../SingleCard';
 
-class Zenbot extends Component {
+class BitcoinCash extends Component {
 	constructor(props) {
 		super(props);
 			this.state = {
@@ -12,7 +12,7 @@ class Zenbot extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('https://api.github.com/repos/DeviaVir/zenbot', {
+		axios.get('https://api.github.com/repos/bitpay/copay', {
 			headers: {
 				Accept: 'application/vnd.github.v3+json'
 			}
@@ -37,4 +37,4 @@ class Zenbot extends Component {
 	}
 }
 
-export default Zenbot;
+export default BitcoinCash;
