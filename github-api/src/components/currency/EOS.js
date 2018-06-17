@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import SingleCard from './SingleCard';
+import SingleCard from '../SingleCard';
 
-class Ripple extends Component {
+class EOS extends Component {
 	constructor(props) {
 		super(props);
 			this.state = {
@@ -11,7 +11,7 @@ class Ripple extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('https://api.github.com/repos/ripple/rippled', {
+		axios.get('https://api.github.com/repos/EOSIO/eos', {
 			headers: {
 				Accept: 'application/vnd.github.v3+json'
 			}
@@ -28,11 +28,11 @@ class Ripple extends Component {
 
 	render() {
 		return (
-				<div className="allCards">
+				<div className="col">
 					<SingleCard dataResults={this.state.cards}/>
 				</div>
 			)
 	}
 }
 
-export default Ripple;
+export default EOS;

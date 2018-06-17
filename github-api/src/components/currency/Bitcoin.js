@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import SingleCard from './SingleCard';
+import SingleCard from '../SingleCard';
 
-class Zenbot extends Component {
+class Bitcoin extends Component {
 	constructor(props) {
 		super(props);
 			this.state = {
@@ -11,7 +11,7 @@ class Zenbot extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('https://api.github.com/repos/DeviaVir/zenbot', {
+		axios.get('https://api.github.com/repos/bitcoin/bitcoin', {
 			headers: {
 				Accept: 'application/vnd.github.v3+json'
 			}
@@ -28,11 +28,11 @@ class Zenbot extends Component {
 
 	render() {
 		return (
-				<div className="allCards">
+				<div className="col">
 					<SingleCard dataResults={this.state.cards}/>
 				</div>
 			)
 	}
 }
 
-export default Zenbot;
+export default Bitcoin;
