@@ -11,7 +11,7 @@ class Etherium extends Component {
 			}
 	}
 
-	componentWillMount() {
+	componentDidMount() {
 		axios.get('https://api.github.com/repos/ethereum/go-ethereum', {
 			headers: {
 				Accept: 'application/vnd.github.v3+json'

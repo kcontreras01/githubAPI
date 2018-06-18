@@ -29,7 +29,7 @@ class SingleCard extends Component {
 
 	render() {
 		return (
-			<div  className="card bg-light mb-3 border-light h-100">
+			<div className="card bg-light mb-3 border-light w-100 h-100">
 				{this.showCard()}
 			</div>
 		)
